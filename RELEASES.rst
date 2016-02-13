@@ -1506,6 +1506,9 @@ Planned
 
 * Internal footprint improvement: reduce error call site size (GH-661)
 
+* Internal performance improvement: minor bytecode executor optimizations
+  (GH-583)
+
 2.0.0 (XXXX-XX-XX)
 ------------------
 
