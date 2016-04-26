@@ -48,6 +48,11 @@
  */
 #define  DUK__ARRAY_MID_JOIN_LIMIT  4096
 
+/* FIXME: add internal duk_harray object (similar to duk_hbufferobject)
+ * which can e.g. contain the 'length' property as a struct member for
+ * faster handling.
+ */
+
 /* Shared entry code for many Array built-ins.  Note that length is left
  * on stack (it could be popped, but that's not necessary).
  */
