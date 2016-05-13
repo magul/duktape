@@ -12,6 +12,7 @@
  *   32
  * Include additional space to be safe.
  */
+/* FIXME: unneeded now */
 #define  DUK_BI_DATE_ISO8601_BUFSIZE  48
 
 /* Maximum length of CommonJS module identifier to resolve.  Length includes
@@ -23,7 +24,9 @@
 /* Helpers exposed for internal use */
 DUK_INTERNAL_DECL void duk_bi_date_timeval_to_parts(duk_double_t d, duk_int_t *parts, duk_double_t *dparts, duk_small_uint_t flags);
 DUK_INTERNAL_DECL duk_double_t duk_bi_date_get_timeval_from_dparts(duk_double_t *dparts, duk_small_uint_t flags);
+#if 0  /*FIXME*/
 DUK_INTERNAL_DECL void duk_bi_date_format_timeval(duk_double_t timeval, duk_uint8_t *out_buf);
+#endif
 DUK_INTERNAL_DECL duk_bool_t duk_bi_date_is_leap_year(duk_int_t year);
 DUK_INTERNAL_DECL duk_bool_t duk_bi_date_timeval_in_valid_range(duk_double_t x);
 DUK_INTERNAL_DECL duk_bool_t duk_bi_date_year_in_valid_range(duk_double_t year);
