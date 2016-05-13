@@ -1,0 +1,117 @@
+
+      - key: "Logger"  # FIXME: remove Logger default built-in
+        value:
+          type: object
+          id: bi_logger_constructor
+        duktape: true
+  - id: bi_logger_constructor
+    class: Function
+    internal_prototype: bi_function_prototype
+    varargs: true
+    native: duk_bi_logger_constructor
+    callable: true
+    constructable: true
+    duktape: true
+
+    properties:
+      - key: "length"
+        value: 1
+        attributes: ""
+        duktape: true
+      - key: "prototype"
+        value:
+          type: object
+          id: bi_logger_prototype
+        attributes: ""
+        duktape: true
+      - key: "name"
+        value: "Logger"
+        attributes: ""
+        duktape: true
+
+  - id: bi_logger_prototype
+    class: Object
+    internal_prototype: bi_object_prototype
+    duktape: true
+
+    properties:
+      - key: "constructor"
+        value:
+          type: object
+          id: bi_logger_constructor
+        attributes: "wc"
+        duktape: true
+
+      # default log level: 2 = info
+      - key: "l"
+        value: 2
+        attributes: "w"
+        duktape: true
+
+      # default logger name (if undefined given or fileName of caller not known)
+      - key: "n"
+        value: "anon"
+        attributes: "w"
+        duktape: true
+
+      - key: "fmt"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_fmt
+          length: 1
+        duktape: true
+      - key: "raw"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_raw
+          length: 1
+        duktape: true
+      - key: "trace"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_log_shared
+          length: 0
+          varargs: true
+          magic: 0
+        duktape: true
+      - key: "debug"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_log_shared
+          length: 0
+          varargs: true
+          magic: 1
+        duktape: true
+      - key: "info"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_log_shared
+          length: 0
+          varargs: true
+          magic: 2
+        duktape: true
+      - key: "warn"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_log_shared
+          length: 0
+          varargs: true
+          magic: 3
+        duktape: true
+      - key: "error"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_log_shared
+          length: 0
+          varargs: true
+          magic: 4
+        duktape: true
+      - key: "fatal"
+        value:
+          type: function
+          native: duk_bi_logger_prototype_log_shared
+          length: 0
+          varargs: true
+          magic: 5
+        duktape: true
+
