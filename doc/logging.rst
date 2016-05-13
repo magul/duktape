@@ -2,6 +2,8 @@
 Duktape logging framework
 =========================
 
+**FIXME: update for logging framework being external.**
+
 Introduction
 ============
 
